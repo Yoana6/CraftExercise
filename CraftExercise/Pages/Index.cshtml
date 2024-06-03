@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>GitHub to Freshdesk Integration</h1>
+
+<form method="post">
+    <div>
+        <label for="githubUsername">GitHub Username</label>
+        <input type="text" id="githubUsername" name="githubUsername" required />
+    </div>
+    <div>
+        <label for="freshdeskSubdomain">Freshdesk Subdomain</label>
+        <input type="text" id="freshdeskSubdomain" name="freshdeskSubdomain" required />
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+@if (Model.Message != null)
+{
+    <p>@Model.Message</p>
+}
+
+
